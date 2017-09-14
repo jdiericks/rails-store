@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Movie.create(title: 'Batman', release_year: 1992, price: 10.30, description: 'In a world world where the joker dosent exist...', imdb_id: 11245, poster_url: 'http://via.placeholder.com/150x350')
+Movie.create(title: 'Batman: The Animated Series', release_year: 1992, rating: 9.0, description: 'The Dark Knight battles crime in Gotham City with occasional help from Robin and Batgirl.', imdb_id: 'tt0103359', poster_url: "MV5BNzI5OWU0MjYtMmMwZi00YTRiLTljMDAtODQ0ZGYxMDljN2E0XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg")

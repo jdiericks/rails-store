@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170914143702) do
   create_table "movies", force: :cascade do |t|
     t.string   "title"
     t.integer  "release_year"
-    t.float    "price"
+    t.float    "rating"
     t.text     "description"
     t.string   "imdb_id"
     t.string   "poster_url"
