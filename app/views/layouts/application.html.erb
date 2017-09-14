@@ -14,10 +14,10 @@
   <body>
     <div id="main-content" class="row full-min-height">
       <%= render "layouts/header" %>
-      <%= render "layouts/alerts" %>
     
       <div class="large-9 columns">
-          <%= yield %>
+        <%= render "layouts/alerts" %>
+        <%= yield %>
       </div>
     </div>
     <%= render "layouts/footer" %>

@@ -9,7 +9,21 @@
         </li>
       </ul>
   <ul class="vertical menu icon-left" >
-    <li style="list-style:none;"><i class="fi-list"></i> <%=link_to "Register", "#" %></li>
-    <li style="list-style:none;"><i class="fi-list"></i> <%=link_to "Login", "#" %></li>
+      <%if signed_in?%>
+        <li style="list-style:none;"><i class="fi-list"></i><%=link_to current_user.email, edit_user_registration_path%></li>
+        <br>
+        <li style="list-style:none;">
+          <%= link_to cart_path do%>
+            <i class="fi-shopping-cart"></i>
+            My Cart
+            (<span class="cart-count"><%=current_user.cart_count%></span>)
+          <%end%>
+        </li>
+        <hr>
+        <li style="list-style:none;"><i class="fi-list"></i><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
+      <%else%>
+        <li style="list-style:none;"><i class="fi-list"></i><%=link_to "Register", new_user_registration_path%></li>
+        <li style="list-style:none;"><i class="fi-list"></i><%=link_to "Login", new_user_session_path%></li>
+      <%end%>
   </ul>
 </nav>
